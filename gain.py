@@ -8,8 +8,10 @@ Sunny = len(data[data['Outlook'] == 'Sunny'])
 Sunny_Y = len(data[(data['Outlook'] == 'Sunny') & (data['Play Tennis'] == 'Yes')])
 Sunny_N = len(data[(data['Outlook'] == 'Sunny') & (data['Play Tennis'] == 'No')])
 
-print(Sunny, Sunny_Y, Sunny_N)
-cate= data['Outlook'].unique()
-for cat in cate:
-    sub = data[data['Outlook'] == cat]
-    print(sub)
+Overcast = len(data[data['Outlook'] == 'Overcast'])
+Overcast_Y = len(data[(data['Outlook'] == 'Overcast') & (data['Play Tennis'] == 'Yes')])
+Overcast_N = len(data[(data['Outlook'] == 'Overcast') & (data['Play Tennis'] == 'No')])
+
+Rainy = len(data[data['Outlook'] == 'Rainy'])
+Rainy_Y = len(data[(data['Outlook'] == 'Rainy') & (data['Play Tennis'] == 'Yes')])
+Rainy_N = len(data[(data['Outlook'] == 'Rainy') & (data['Play Tennis'] == 'No')])
