@@ -18,3 +18,8 @@ Rainy = len(data[data['Outlook'] == 'Rainy'])
 Rainy_Y = len(data[(data['Outlook'] == 'Rainy') & (data['Play Tennis'] == 'Yes')])
 Rainy_N = len(data[(data['Outlook'] == 'Rainy') & (data['Play Tennis'] == 'No')])
 print("Rainy: ", Rainy, " ", "Rainy_Y: ", Rainy_Y, " ", "Rainy_N: ", Rainy_N)
+
+total_yes = len(data[data['Play Tennis'] == 'Yes'])
+total_no = len(data[data['Play Tennis'] == 'No'])
+total = total_yes + total_no
+
