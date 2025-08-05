@@ -1,5 +1,6 @@
 import csv
 import pandas as pd
+import math
 
 data = pd.read_csv("C:\\Users\\User\\OneDrive\\Documents\\Weather.csv")
 print(data)
@@ -22,4 +23,12 @@ print("Rainy: ", Rainy, " ", "Rainy_Y: ", Rainy_Y, " ", "Rainy_N: ", Rainy_N)
 total_yes = len(data[data['Play Tennis'] == 'Yes'])
 total_no = len(data[data['Play Tennis'] == 'No'])
 total = total_yes + total_no
+
+def entropy(pos, neg):
+    total = pos + neg
+    if total == 0 or pos == 0 or neg == 0:
+        return 0
+    p_pos = pos/total
+    p_neg = neg/total
+    return -p_pos * math.log2(p_pos) - p_neg * math.log2(p_neg)
 
