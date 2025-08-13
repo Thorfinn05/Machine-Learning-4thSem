@@ -14,5 +14,5 @@ Y = data['Go']
 dtree = DecisionTreeClassifier()
 dtree.fit(X,Y)
 plt.figure(figsize=(10,6))
-tree.plot_tree(dtree, feature_names=features, filled = True)
+tree.plot_tree(dtree, feature_names=features , filled = True)
 plt.show()
