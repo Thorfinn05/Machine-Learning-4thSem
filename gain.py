@@ -20,11 +20,11 @@ Rainy_Y = len(data[(data['Outlook'] == 'Rainy') & (data['Play Tennis'] == 'Yes')
 Rainy_N = len(data[(data['Outlook'] == 'Rainy') & (data['Play Tennis'] == 'No')])
 print("Rainy: ", Rainy, " ", "Rainy_Y: ", Rainy_Y, " ", "Rainy_N: ", Rainy_N)
 
-total_yes = len(data[data['Play Tennis'] == 'Yes'])
+total_yes = len(data[data['Play Tennis'] == 'Yes']) ##########
 total_no = len(data[data['Play Tennis'] == 'No'])
-total = total_yes + total_no
+total = total_yes + total_no ######
 
-def entropy(pos, neg):
+def entropy(pos, neg): ##########
     total = pos + neg
     if total == 0 or pos == 0 or neg == 0:
         return 0
@@ -32,12 +32,12 @@ def entropy(pos, neg):
     p_neg = neg/total
     return -p_pos * math.log2(p_pos) - p_neg * math.log2(p_neg)
 
-entropy_total = entropy(total_yes, total_no)
+entropy_total = entropy(total_yes, total_no)  ##########
 
 # 7. Entropy for each Outlook category
 entropy_sunny = entropy(Sunny_Y, Sunny_N)
 entropy_rainy = entropy(Rainy_Y, Rainy_N)
-entropy_overcast = entropy(Overcast_Y, Overcast_N)
+entropy_overcast = entropy(Overcast_Y, Overcast_N) 
 
 # 8. Weighted entropy for Outlook attribute
 weighted_entropy = ((Sunny / total) * entropy_sunny +
@@ -45,7 +45,7 @@ weighted_entropy = ((Sunny / total) * entropy_sunny +
                     (Overcast / total) * entropy_overcast)
 
 # 9. Information Gain for Outlook
-gainn_outlook = entropy_total - weighted_entropy
+gainn_outlook = entropy_total - weighted_entropy 
 
 # 10. Print results
 print("Entropy (total):", round(entropy_total, 4))
