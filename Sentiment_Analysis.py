@@ -85,3 +85,6 @@ else:
 
 positive_loss = loss_function(sigmoid_value, 1)
 negative_loss = loss_function(sigmoid_value, 0)
+
+print("The positive loss is: ", positive_loss)
+print("The negative loss is: ", negative_loss)
