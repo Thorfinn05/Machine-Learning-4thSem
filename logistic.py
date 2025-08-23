@@ -16,5 +16,4 @@ print(x6)
 for word in words:
     if word in punctuations:
         words.remove(word)
-
-print(words)
+print(modified_review)
