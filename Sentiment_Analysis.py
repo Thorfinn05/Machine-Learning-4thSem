@@ -27,3 +27,15 @@ for word in words:
     if word in punctuations:
         words.remove(word)
 print(modified_review)
+
+for word in modified_review:
+    if word in positive_words:
+        x1 += 1
+    elif word in negative_words:
+        x2 += 1
+    elif word in pronouns:
+        x4 += 1
+    elif (word == "no"):
+        x3 += 1
+    elif (word == "!"):
+        x5 += 1
