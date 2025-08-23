@@ -42,3 +42,10 @@ for word in modified_review:
     elif (word == "!"):
         x5 += 1
 x6 = math.log(x6)
+
+print("Positive words: ", x1)
+print("Negative words: ", x2)
+print("Number of no: ", x3)
+print("Number of Prononuns: ", x4)
+print("Number of Excalimation: ", x5)
+print("Number of words(log): ", x6)
