@@ -4,6 +4,10 @@ def sigmoid(z):
     result = 1/(1+(2.718**(-z)))
     return result
 
+def loss_function(y, yg):
+    result = -(yg*math.log(y) + ((1-yg)*math.log(1-y)))
+    return result
+
 with open ("D:\Github\Machine-Learning-4thSem\Movie Review.txt") as file:
     review = file.read()
     print(review)
@@ -78,3 +82,4 @@ if (sigmoid_value <= 0.5):
     print("The review is negative!")
 else:
     print("The review is positive!")
+
