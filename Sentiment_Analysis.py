@@ -83,3 +83,5 @@ if (sigmoid_value <= 0.5):
 else:
     print("The review is positive!")
 
+positive_loss = loss_function(sigmoid_value, 1)
+negative_loss = loss_function(sigmoid_value, 0)
