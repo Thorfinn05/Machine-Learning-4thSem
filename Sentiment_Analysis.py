@@ -61,3 +61,8 @@ print("Features: \n", features)
 weights = [2.5, -5.0, -1.2, 0.5, 2.0, 0.7]
 bias = 0.1
 z = 0
+
+for i in range(len(features)):
+    z = z + weights[i]*features[i]
+z = z + bias
+print("The value of Z: ", z)
