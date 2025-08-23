@@ -8,7 +8,7 @@ modified_review = words
 
 punctuations = [",", ".", "?"]
 positive_words = ["sure", "enjoyable", "great", "nice", "good", "fantastic", "wow", "charming"]
-negative_words = ["second-grade", "hokey", ]
+negative_words = ["second-grade", "hokey", "bad", "boring", "break-up", "worthless"]
 
 x6 = 0
 
