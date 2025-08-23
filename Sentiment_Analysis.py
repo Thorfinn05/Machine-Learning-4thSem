@@ -11,6 +11,12 @@ positive_words = ["sure", "enjoyable", "great", "nice", "good", "fantastic", "wo
 negative_words = ["second-grade", "hokey", "bad", "boring", "break-up", "worthless"]
 pronouns = ['i', "me", "you", "they", "we", "he", "she", "them"]
 
+features = []
+x1 =0
+x2 = 0
+x3 = 0
+x4 = 0
+x5 = 0
 x6 = 0
 
 for word in words:
