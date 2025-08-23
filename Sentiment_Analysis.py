@@ -73,3 +73,8 @@ print("The value of Z: ", z)
 
 sigmoid_value = sigmoid(z)
 print("Sigmoid Value: ", sigmoid_value)
+
+if (sigmoid_value <= 0.5):
+    print("The review is negative!")
+else:
+    print("The review is positive!")
