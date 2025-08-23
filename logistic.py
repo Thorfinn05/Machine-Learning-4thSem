@@ -4,7 +4,17 @@ with open ("D:\Github\Machine-Learning-4thSem\Movie Review.txt") as file:
 review = review.lower()
 words = review.split()
 print(words)
+modified_review = words
+punctuations = [",", ".", "?"]
+
 x6 = 0
+
 for word in words:
     x6 += 1
 print(x6)
+
+for word in words:
+    if word in punctuations:
+        words.remove(word)
+
+print(words)
