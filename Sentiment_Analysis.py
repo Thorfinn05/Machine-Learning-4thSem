@@ -57,3 +57,7 @@ features.append(x4)
 features.append(x5)
 features.append(x6)
 print("Features: \n", features)
+
+weights = [2.5, -5.0, -1.2, 0.5, 2.0, 0.7]
+bias = 0.1
+z = 0
