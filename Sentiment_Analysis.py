@@ -1,3 +1,5 @@
+import math
+
 with open ("D:\Github\Machine-Learning-4thSem\Movie Review.txt") as file:
     review = file.read()
     print(review)
@@ -39,3 +41,4 @@ for word in modified_review:
         x3 += 1
     elif (word == "!"):
         x5 += 1
+x6 = math.log(x6)
