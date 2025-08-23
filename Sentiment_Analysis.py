@@ -70,3 +70,6 @@ for i in range(len(features)):
     z = z + weights[i]*features[i]
 z = z + bias
 print("The value of Z: ", z)
+
+sigmoid_value = sigmoid(z)
+print("Sigmoid Value: ", sigmoid_value)
