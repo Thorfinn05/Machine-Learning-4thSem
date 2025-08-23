@@ -9,6 +9,7 @@ modified_review = words
 punctuations = [",", ".", "?"]
 positive_words = ["sure", "enjoyable", "great", "nice", "good", "fantastic", "wow", "charming"]
 negative_words = ["second-grade", "hokey", "bad", "boring", "break-up", "worthless"]
+pronouns = ['i', "me", "you", "they", "we", "he", "she", "them"]
 
 x6 = 0
 
