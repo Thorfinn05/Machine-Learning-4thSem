@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load dataset
-data = pd.read_csv("F:\\Machine Learning Lab - 5th sem\\Assignment 1\\weather.csv")
+data = pd.read_excel("Weather.xlsx")
 print(data)
 
 # Gini index calculation function
