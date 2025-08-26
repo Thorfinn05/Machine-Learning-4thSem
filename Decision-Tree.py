@@ -14,8 +14,8 @@ def gini_index(yes, no):
     return 1 - (p_yes**2 + p_no**2)
 
 # Step 1: Calculate total dataset Gini index
-total_yes = len(data[data["Played football"] == "Yes"])
-total_no = len(data[data["Played football"] == "No"])
+total_yes = len(data[data["Play Football"] == "Yes"])
+total_no = len(data[data["Play Football"] == "No"])
 total_gini = gini_index(total_yes, total_no)
 total = total_yes + total_no
 print(f"Total Gini of dataset: {total_gini:.4f}")
@@ -31,8 +31,8 @@ for feature in features:
     
     for value in feature_values:
         subset = data[data[feature] == value]
-        yes = len(subset[subset["Played football"] == "Yes"])
-        no = len(subset[subset["Played football"] == "No"])
+        yes = len(subset[subset["Play Football"] == "Yes"])
+        no = len(subset[subset["Play Football"] == "No"])
         gini = gini_index(yes, no)
         weight = (yes + no) / total
         feature_gini += weight * gini
