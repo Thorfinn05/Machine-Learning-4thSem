@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load dataset
-data = pd.read_excel("Weather.xlsx")
+data = pd.read_csv("Weather-D.csv")
 print(data)
 
 # Gini index calculation function
@@ -11,7 +11,7 @@ def gini_index(yes, no):
         return 0
     p_yes = yes / total
     p_no = no / total
-    return 1 - (p_yes*2 + p_no*2)
+    return 1 - (p_yes**2 + p_no**2)
 
 # Step 1: Calculate total dataset Gini index
 total_yes = len(data[data["Played football"] == "Yes"])
