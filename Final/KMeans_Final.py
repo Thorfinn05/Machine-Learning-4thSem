@@ -1,6 +1,6 @@
 import math
 import random
-import pandas
+import pandas as pd
 import matplotlib.pyplot as plt
 
 def distance(p1, p2):
@@ -44,7 +44,7 @@ def kmeans(data, k, max_iters = 100):
         centroids = new_centroids
     return centroids, clusters
         
-df = pd.read_csv('data.csv')
+df = pd.read_csv("D:\Github\Machine-Learning-4thSem\Final\data.csv")
 print(df)
 data = df.values.tolist()
 print(data)
