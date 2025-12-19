@@ -6,12 +6,12 @@ data = pd.read_csv("D:\Github\Machine-Learning-4thSem\Final\Weather-D.csv")
 print(data)
 
 Sunny = len(data[data['Outlook'] == 'Sunny'])
-Sunny_Y = len(data[(data['Outlook'] == 'Sunny') & (data['Play Tennis'] == 'Yes')])
-Sunny_N = len(data[(data['Outlook'] == 'Sunny') & (data['Play Tennis'] == 'No')])
+Sunny_Y = len(data[(data['Outlook'] == 'Sunny') & (data['Play Football'] == 'Yes')])
+Sunny_N = len(data[(data['Outlook'] == 'Sunny') & (data['Play Football'] == 'No')])
 print("Sunny: ", Sunny, " ", "Sunny_Y: ", Sunny_Y, " ", "Sunny_N: ", Sunny_N)
 
-total_yes = len(data[data['Play Tennis'] == 'Yes']) ##########
-total_no = len(data[data['Play Tennis'] == 'No'])
+total_yes = len(data[data['Play Football'] == 'Yes']) ##########
+total_no = len(data[data['Play Football'] == 'No'])
 total = total_yes + total_no ######
 
 def entropy(pos, neg): ##########
@@ -29,8 +29,8 @@ def calc_gain(attribute):
     weighted_entropy = 0
     for cat in categories:
         subset = data[data[attribute] == cat]
-        pos = len(subset[subset['Play Tennis'] == 'Yes'])
-        neg = len(subset[subset['Play Tennis'] == 'No'])
+        pos = len(subset[subset['Play Football'] == 'Yes'])
+        neg = len(subset[subset['Play Football'] == 'No'])
         ent = entropy(pos, neg)
         weight = len(subset) / total
         weighted_entropy += weight * ent
@@ -40,7 +40,7 @@ def calc_gain(attribute):
 # 6. Calculate information gain for each attribute
 gain_outlook = calc_gain('Outlook')
 gain_humidity = calc_gain('Humidity')
-gain_wind = calc_gain('Wind')
+gain_wind = calc_gain('Windy')
 gain_temperature = calc_gain('Temperature')
 
 # 7. Print information gains
