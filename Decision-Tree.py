@@ -1,4 +1,5 @@
 import pandas as pd
+import math
 
 # Load dataset
 data = pd.read_csv("Weather-D.csv")
@@ -13,10 +14,19 @@ def gini_index(yes, no):
     p_no = no / total
     return 1 - (p_yes**2 + p_no**2)
 
+def entropy(pos, neg):
+    total = pos + neg
+    if total ==0 or pos == 0 or neg == 0:
+        return 0
+    p_pos = pos/total
+    p_neg = neg/total
+    return -p_pos * math.log2(p_pos) - p_neg * math.log2(p_neg)
+
 # Step 1: Calculate total dataset Gini index
 total_yes = len(data[data["Play Football"] == "Yes"])
 total_no = len(data[data["Play Football"] == "No"])
 total_gini = gini_index(total_yes, total_no)
+total_entropy= entropy(total_yes, total_no)
 total = total_yes + total_no
 print(f"Total Gini of dataset: {total_gini:.4f}")
 
